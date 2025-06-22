@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #fdfdfd, #eaf2ff);
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+textarea {
+  padding: 12px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Timeline - Desktop */
+.timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #444;
+  z-index: 1;
+}
+
+.blog {
+  width: 45%;
+  background-color: white;
+  padding: 25px 30px;
+  margin: 40px 0;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.blog::after,
+.blog::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  z-index: 1;
+}
+
+.blog::after {
+  width: 25px;
+  height: 2px;
+  background: #444;
+}
+
+.blog::before {
+  width: 14px;
+  height: 14px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+.left {
+  margin-right: auto;
+}
+.left::after {
+  right: -25px;
+}
+.left::before {
+  right: -7px;
+}
+
+.right {
+  margin-left: auto;
+}
+.right::after {
+  left: -25px;
+}
+.right::before {
+  left: -7px;
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+  margin-top: 14px;
+}
+
+/* Mobile View - Vertical Cards */
+@media (max-width: 768px) {
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 0;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .blog {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    position: relative;
+  }
+
+  .blog::after,
+  .blog::before {
+    display: none !important;
+  }
+
+  .left,
+  .right {
+    margin: 0 !important;
+  }
+
+  .blog p {
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 500;
+    white-space: pre-line;
+  }
+
+  .date {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+}

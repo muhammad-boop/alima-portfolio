@@ -1,0 +1,168 @@
+/* === Base Layout === */
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 30px;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  color: #2e2e2e;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 60px;
+}
+
+/* === Map Section === */
+.map-section iframe {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.address-info {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 15px;
+  color: #555;
+}
+
+/* === Form Section === */
+.form-section {
+  margin: 60px 0;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h2 {
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+form input,
+form textarea {
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  transition: border 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #3b82f6;
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+form button {
+  background: #3b82f6;
+  color: white;
+  padding: 14px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.25s;
+}
+
+form button:hover {
+  background: #2563eb;
+}
+
+/* === Quick Contact === */
+.quick-contact {
+  margin-top: 60px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.quick-contact h2 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.contact-links a {
+  padding: 10px 20px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #111;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+  background: #3b82f6;
+  color: #fff;
+  border-color: #3b82f6;
+}
+
+/* === Why Contact Us === */
+.why-contact {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.why-contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.why-contact p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-section h2,
+  .quick-contact h2,
+  .why-contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
